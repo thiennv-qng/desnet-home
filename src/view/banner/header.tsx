@@ -1,8 +1,15 @@
+import { useSelector } from 'react-redux'
+
 import { Col, Row, Image, Button, Space, Typography } from 'antd'
 
-import LOGO from 'static/images/logo.png'
+import { AppState } from 'store'
 
-const SECTIONS_LIST = [
+import LOGO from 'static/images/logo.png'
+import LOGO_MOBILE from 'static/images/logo192.png'
+import DrawerHeader from './drawerHeader'
+import { useContact } from 'hooks/useContact'
+
+export const SECTIONS_LIST = [
   { title: 'Home', route: 'home' },
   { title: 'Projects', route: 'projects' },
   { title: 'Process', route: 'process' },
@@ -10,6 +17,10 @@ const SECTIONS_LIST = [
 ]
 
 const Header = () => {
+  const width = useSelector((state: AppState) => state.ui.width)
+  const onContact = useContact()
+  const isMobile = width < 998
+  const logo = !isMobile ? LOGO : LOGO_MOBILE
   const scrollToSection = (id: string) => {
     if (!id) return
 
@@ -23,27 +34,35 @@ const Header = () => {
     <Row className="header" justify="space-between" align="middle">
       <Col>
         <Image
-          src={LOGO}
+          src={logo}
           preview={false}
           style={{ height: 32, cursor: 'pointer' }}
         />
       </Col>
-      <Col>
-        <Space size={40}>
-          {SECTIONS_LIST.map(({ title, route }) => (
-            <Typography.Text
-              style={{ color: '#F3F4F3', cursor: 'pointer' }}
-              key={route}
-              onClick={() => scrollToSection(route)}
-            >
-              {title}
-            </Typography.Text>
-          ))}
-        </Space>
-      </Col>
-      <Col>
-        <Button type="primary">Contact us</Button>
-      </Col>
+      {width > 661 && (
+        <Col>
+          <Space size={40}>
+            {SECTIONS_LIST.map(({ title, route }) => (
+              <Typography.Text
+                style={{ color: '#F3F4F3', cursor: 'pointer' }}
+                key={route}
+                onClick={() => scrollToSection(route)}
+                className="section"
+              >
+                {title}
+              </Typography.Text>
+            ))}
+          </Space>
+        </Col>
+      )}
+      <Space size={16}>
+        {width <= 661 && <DrawerHeader scrollToSection={scrollToSection} />}
+        <Col>
+          <Button onClick={onContact} type="primary">
+            Contact us
+          </Button>
+        </Col>
+      </Space>
     </Row>
   )
 }
