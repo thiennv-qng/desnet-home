@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <Row
-        gutter={[48, 48]}
+        gutter={[0, 48]}
         className="footer_content"
         align="middle"
         justify={isMobile ? 'center' : 'space-between'}

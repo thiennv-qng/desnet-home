@@ -23,7 +23,7 @@ const CardTimeLine = (props: CardTimeLineProps) => {
     <Row
       gutter={[0, 48]}
       className="timeline"
-      data-aos="fade-left"
+      data-aos="fade-up"
       data-aos-duration={`${index * 300}`}
       align="top"
     >

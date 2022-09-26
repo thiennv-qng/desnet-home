@@ -14,7 +14,7 @@ const Partner = () => {
   return (
     <Row justify="center">
       <Col sm={24} md={16} lg={10}>
-        <Row gutter={[24, 24]}>
+        <Row gutter={[0, 24]}>
           <Col span={24} style={{ textAlign: 'center' }}>
             <Typography.Text style={{ fontSize: 26 }}>
               Trusted by
@@ -23,7 +23,7 @@ const Partner = () => {
           <Col span={24}>
             <Row
               style={{ textAlign: isMobile ? 'center' : 'left' }}
-              gutter={[32, 32]}
+              gutter={[0, 32]}
               justify="space-between"
             >
               {PARTNERS.map((partner) => (

@@ -43,7 +43,7 @@ const AboutUs = () => {
         </Col>
         <Col span={24}>
           {isMobile ? (
-            <Row gutter={[16, 16]}>
+            <Row gutter={[0, 16]}>
               {TIMELINE.map(({ desc, quarter, year }, index) => (
                 <Col span={24} key={desc}>
                   <CardTimeLine

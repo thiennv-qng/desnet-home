@@ -1,27 +1,42 @@
-import { Col, Row, Typography, Image } from 'antd'
 import { useCallback, useEffect } from 'react'
+import { useSelector } from 'react-redux'
+
+import { Col, Row, Typography, Image } from 'antd'
+
+import { AppState } from 'store'
 
 import PROJECT1 from 'static/images/projects/project1.png'
 import PROJECT2 from 'static/images/projects/project2.png'
 import PROJECT3 from 'static/images/projects/project3.png'
 
+import PROJECT1_MOBILE from 'static/images/projects/project1-mobile.png'
+import PROJECT2_MOBILE from 'static/images/projects/project2-mobile.png'
+import PROJECT3_MOBILE from 'static/images/projects/project3-mobile.png'
+
 import './index.less'
 
-const PROJECTS = [
-  { name: 'Sentre', img: PROJECT1, url: 'https://hub.sentre.io/app/store' },
-  {
-    name: 'Inter DAO',
-    img: PROJECT2,
-    url: 'https://hub.sentre.io/app/inter_dao?autoInstall=true',
-  },
-  {
-    name: 'Any Art',
-    img: PROJECT3,
-    url: 'https://hub.sentre.io/app/any_arts?autoInstall=true',
-  },
-]
-
 const Projects = () => {
+  const width = useSelector((state: AppState) => state.ui.width)
+  const isMobile = width < 575
+
+  const PROJECTS = [
+    {
+      name: 'Sentre',
+      img: isMobile ? PROJECT1_MOBILE : PROJECT1,
+      url: 'https://hub.sentre.io/app/store',
+    },
+    {
+      name: 'InterDAO',
+      img: isMobile ? PROJECT2_MOBILE : PROJECT2,
+      url: 'https://hub.sentre.io/app/inter_dao?autoInstall=true',
+    },
+    {
+      name: 'Any Arts',
+      img: isMobile ? PROJECT3_MOBILE : PROJECT3,
+      url: 'https://hub.sentre.io/app/any_arts?autoInstall=true',
+    },
+  ]
+
   const setMultiAttributes = useCallback(
     (el: Element, attrs: Record<string, string | number>) => {
       let value: string[] = []
