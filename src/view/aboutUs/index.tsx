@@ -4,12 +4,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Button, Col, Row, Space, Typography } from 'antd'
 import { Lazy, Navigation } from 'swiper'
 import CardTimeLine from './cardTimeLine'
+import IonIcon from 'components/icon'
 
 import { TIMELINE } from './constant'
 import { AppState } from 'store'
 
 import BG_BANNER from 'static/images/banner.png'
-import IonIcon from 'components/icon'
 
 import 'swiper/css/bundle'
 import './index.less'
