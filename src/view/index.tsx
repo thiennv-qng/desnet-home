@@ -13,12 +13,7 @@ import './index.less'
 
 const View = () => {
   return (
-    <Row
-      gutter={[
-        { xs: 56, sm: 56, md: 116, lg: 116 },
-        { xs: 56, sm: 56, md: 116, lg: 116 },
-      ]}
-    >
+    <Row gutter={[0, { xs: 56, sm: 56, md: 116, lg: 116 }]}>
       <Col span={24}>
         <Banner />
       </Col>
