@@ -1,10 +1,12 @@
 import { Button, Col, Row, Typography } from 'antd'
+import { useContact } from 'hooks/useContact'
 import { useEffect, useState } from 'react'
 
 import './index.less'
 
 const Collaboration = () => {
   const [state, setState] = useState(2)
+  const onContact = useContact()
 
   useEffect(() => {
     const collaborationTitles = document.querySelectorAll('.collaboration-text')
@@ -43,7 +45,9 @@ const Collaboration = () => {
         </Typography.Title>
       </Col>
       <Col span={24}>
-        <Button type="primary">Contact us</Button>
+        <Button size="large" onClick={onContact} type="primary">
+          Contact us
+        </Button>
       </Col>
     </Row>
   )

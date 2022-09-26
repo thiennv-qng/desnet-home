@@ -32,6 +32,11 @@ export const TIMELINE = [
   {
     quarter: 2,
     year: 2022,
-    desc: 'Collaborate with InterDAO.',
+    desc: 'Collaborate with InterDAO and support Solana Vietnam coding camp season 1.',
+  },
+  {
+    quarter: 3,
+    year: 2022,
+    desc: 'Collaborate with Any Art.',
   },
 ]

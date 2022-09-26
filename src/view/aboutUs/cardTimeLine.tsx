@@ -24,7 +24,8 @@ const CardTimeLine = (props: CardTimeLineProps) => {
       gutter={[0, 48]}
       className="timeline"
       data-aos="fade-left"
-      data-aos-duration={`${index * 200}`}
+      data-aos-duration={`${index * 300}`}
+      align="top"
     >
       <Col span={24}>
         <Space direction="vertical">
@@ -32,7 +33,7 @@ const CardTimeLine = (props: CardTimeLineProps) => {
           <Image src={YEARS[year]} preview={false} />
         </Space>
       </Col>
-      <Col span={24}>
+      <Col span={24} style={{ minHeight: 125 }}>
         <Typography.Text style={{ fontSize: 20, fontWeight: 400 }}>
           {desc}
         </Typography.Text>

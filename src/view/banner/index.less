@@ -17,7 +17,7 @@
     font-weight: 600 !important;
     line-height: 1 !important;
   }
-  .special-tag {
+  .top {
     position: relative;
     &::after {
       content: '</>';
@@ -35,8 +35,13 @@
       transform: translateY(-50%);
     }
   }
-  .arrow {
+  .middle {
+    color: #123a7e !important;
+    font-weight: 800 !important;
+  }
+  .end {
     position: relative;
+    text-align: right;
     &::after {
       content: '';
       background: url('../../static/images/arrow.svg');
@@ -50,17 +55,104 @@
       background-size: cover;
       transform-origin: 0 100%;
     }
+  }
+  .extra-text {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    color: #161a14;
+  }
+}
 
-    &::before {
-      content: 'Blockchain experts for hire, ready 24/7.';
-      font-weight: 400;
-      font-size: 26px;
-      line-height: 32px;
-      color: #161a14;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
+.header {
+  .section {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+  .section:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: -5px;
+    background: #f3f4f3;
+    height: 2px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .section:hover::after,
+  .section:focus::after,
+  .section:active::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+.ant-drawer-header {
+  border: none !important;
+  padding: 16px !important;
+}
+.ant-drawer-body {
+  padding: 0px 24px !important;
+}
+
+@media (max-width: 1199.9px) {
+  .banner {
+    &_content {
+      padding: 24px 16px !important;
+    }
+    &_text {
+      font-size: 90px !important;
+    }
+    .end {
+      &::after {
+        bottom: calc(100% + 32px) !important;
+        right: -55px !important;
+        width: 64px !important;
+        height: 197px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 998px) {
+  .banner {
+    &_text {
+      font-size: 68px !important;
+      text-align: center;
+    }
+    .top {
+      margin-bottom: 12px;
+      &::after {
+        display: none;
+      }
+    }
+    .middle {
+      margin-bottom: 12px;
+    }
+    .end {
+      text-align: center;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .extra-text {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .title-section {
+    font-size: 32px !important;
+  }
+  .banner {
+    &_text {
+      font-size: 52px !important;
+      text-align: center;
     }
   }
 }
