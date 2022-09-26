@@ -1,16 +1,43 @@
-import { Col, Row, Typography } from "antd";
+import { Col, Row } from 'antd'
+import Banner from './banner'
+import Partner from './partner'
+import Projects from './projects'
+import Process from './process'
+import AboutUs from './aboutUs'
+import Watcher from './watcher'
+import Collapse from './collapse'
+import Footer from './footer'
 
-import "static/styles/dark.less";
-import "static/styles/light.less";
+import 'static/styles/theme.less'
+import './index.less'
 
 const View = () => {
   return (
-    <Row gutter={[8, 8]}>
+    <Row gutter={[116, 116]}>
       <Col span={24}>
-        <Typography.Title level={5}>Mr Hoai</Typography.Title>
+        <Banner />
       </Col>
+      <Col span={24}>
+        <Partner />
+      </Col>
+      <Col span={24}>
+        <Projects />
+      </Col>
+      <Col span={24}>
+        <Process />
+      </Col>
+      <Col span={24}>
+        <AboutUs />
+      </Col>
+      <Col span={24}>
+        <Collapse />
+      </Col>
+      <Col span={24}>
+        <Footer />
+      </Col>
+      <Watcher />
     </Row>
-  );
-};
+  )
+}
 
-export default View;
+export default View

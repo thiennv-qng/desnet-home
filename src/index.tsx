@@ -1,19 +1,19 @@
-import { render } from "react-dom";
-import { HashRouter } from "react-router-dom";
-import { Provider } from "react-redux";
+import { render } from 'react-dom'
+import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
-import { ConfigProvider } from "antd";
-import View from "./view";
+import View from './view'
 
-import store from "store";
+import store from 'store'
 
 render(
   <Provider store={store}>
-    <HashRouter>
-      <ConfigProvider prefixCls={"interdao-home"}>
-        <View />
-      </ConfigProvider>
-    </HashRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<View />} />
+        <Route path="*" element={<Navigate to="/home" replace />} />
+      </Routes>
+    </BrowserRouter>
   </Provider>,
-  document.getElementById("root")
-);
+  document.getElementById('root'),
+)

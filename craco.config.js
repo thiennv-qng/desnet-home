@@ -11,9 +11,6 @@ module.exports = {
         lessLoaderOptions: {
           lessOptions: {
             javascriptEnabled: true,
-            modifyVars: {
-              "@ant-prefix": "interdao-home",
-            },
           },
         },
       },

@@ -1,0 +1,66 @@
+.banner {
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-origin: border-box;
+  background-attachment: fixed;
+
+  &_content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px 15px;
+  }
+
+  &_text {
+    font-size: 112px !important;
+    color: #f3f4f3 !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+  }
+  .special-tag {
+    position: relative;
+    &::after {
+      content: '</>';
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      font-size: 20px !important;
+      color: #161a14;
+      padding: 8px;
+      background: rgba(243, 244, 243, 0.8);
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(6px);
+      border-radius: 4px;
+      font-weight: 600;
+      transform: translateY(-50%);
+    }
+  }
+  .arrow {
+    position: relative;
+    &::after {
+      content: '';
+      background: url('../../static/images/arrow.svg');
+      position: absolute;
+      bottom: calc(100% + 52px);
+      right: -83px;
+      width: 80px;
+      height: 257px;
+      transform: translateY(50%) rotate(350deg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform-origin: 0 100%;
+    }
+
+    &::before {
+      content: 'Blockchain experts for hire, ready 24/7.';
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 32px;
+      color: #161a14;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
