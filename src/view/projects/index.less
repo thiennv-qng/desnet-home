@@ -16,7 +16,7 @@
 }
 
 .project-title {
-  background: rgba(255, 255, 255, 0.7);
+  // background: rgba(255, 255, 255, 0.7);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,10 +24,18 @@
   padding: 24px 64px;
   backdrop-filter: blur(12px);
   border-radius: 8px;
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.7) 50%,
+      #55a432 50%
+    )
+    right;
   z-index: 1;
   cursor: pointer;
+  transition: 0.3s ease-out;
+  background-size: 200%;
   &:hover {
-    background-color: #55a432 !important;
     color: #f3f4f3 !important;
+    background-position: left;
   }
 }

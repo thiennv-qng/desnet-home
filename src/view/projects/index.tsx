@@ -6,7 +6,7 @@ import './index.less'
 
 const Projects = () => {
   return (
-    <Row gutter={[0, 72]}>
+    <Row gutter={[0, 72]} id="projects">
       <Col span={24} style={{ textAlign: 'center' }}>
         <Typography.Title className="title-section" level={1}>
           Recent Projects

@@ -5,7 +5,7 @@ import Projects from './projects'
 import Process from './process'
 import AboutUs from './aboutUs'
 import Watcher from './watcher'
-import Collapse from './collapse'
+import Collaboration from './collaboration'
 import Footer from './footer'
 
 import 'static/styles/theme.less'
@@ -30,7 +30,7 @@ const View = () => {
         <AboutUs />
       </Col>
       <Col span={24}>
-        <Collapse />
+        <Collaboration />
       </Col>
       <Col span={24}>
         <Footer />

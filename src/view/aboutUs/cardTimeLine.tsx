@@ -8,6 +8,7 @@ type CardTimeLineProps = {
   quarter: number
   year: number
   desc: string
+  index: number
 }
 
 const YEARS: Record<number, string> = {
@@ -17,9 +18,14 @@ const YEARS: Record<number, string> = {
 }
 
 const CardTimeLine = (props: CardTimeLineProps) => {
-  const { desc, quarter, year } = props
+  const { desc, quarter, year, index } = props
   return (
-    <Row gutter={[0, 48]} className="timeline">
+    <Row
+      gutter={[0, 48]}
+      className="timeline"
+      data-aos="fade-left"
+      data-aos-duration={`${index * 200}`}
+    >
       <Col span={24}>
         <Space direction="vertical">
           <Typography.Title level={3}>Q{quarter}</Typography.Title>

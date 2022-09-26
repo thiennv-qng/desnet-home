@@ -21,7 +21,11 @@ const AboutUs = () => {
     prevEl: DEFAULT_PREV_CLN,
   }
   return (
-    <div className="about-us" style={{ background: `url(${BG_BANNER})` }}>
+    <div
+      id="about-us"
+      className="about-us"
+      style={{ background: `url(${BG_BANNER})` }}
+    >
       <Row gutter={[0, 72]} className="about-us_content">
         <Col span={24} style={{ textAlign: 'center' }}>
           <Typography.Title
@@ -38,9 +42,14 @@ const AboutUs = () => {
             navigation={navigateConfig}
             slidesPerView={4}
           >
-            {TIMELINE.map(({ desc, quarter, year }) => (
+            {TIMELINE.map(({ desc, quarter, year }, index) => (
               <SwiperSlide key={desc}>
-                <CardTimeLine desc={desc} quarter={quarter} year={year} />
+                <CardTimeLine
+                  index={index + 1}
+                  desc={desc}
+                  quarter={quarter}
+                  year={year}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

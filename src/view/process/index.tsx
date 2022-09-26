@@ -7,7 +7,7 @@ import './index.less'
 
 const Process = () => {
   return (
-    <div className="process">
+    <div className="process" id="process">
       <Row gutter={[24, 24]}>
         <Col xs={24} sm={12} md={16} lg={12}>
           <Space direction="vertical" size={12}>
@@ -20,7 +20,16 @@ const Process = () => {
           </Space>
         </Col>
         {PROCESS_CONTENT.map((content, index) => (
-          <Col xs={24} sm={12} md={8} lg={6} key={index}>
+          <Col
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-duration={`${(index + 1) * 300}`}
+            xs={24}
+            sm={12}
+            md={8}
+            lg={6}
+            key={index}
+          >
             <ProcessDetail
               description={content.description}
               title={content.title}

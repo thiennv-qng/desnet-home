@@ -6,7 +6,11 @@ import BG_BANNER from 'static/images/bg-banner.png'
 import Header from './header'
 const Banner = () => {
   return (
-    <div className="banner" style={{ background: `url(${BG_BANNER})` }}>
+    <div
+      id="home"
+      className="banner"
+      style={{ background: `url(${BG_BANNER})` }}
+    >
       <Row className="banner_content" gutter={[0, 116]}>
         <Col span={24}>
           <Header />

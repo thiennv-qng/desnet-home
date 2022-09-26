@@ -10,6 +10,15 @@ const SECTIONS_LIST = [
 ]
 
 const Header = () => {
+  const scrollToSection = (id: string) => {
+    if (!id) return
+
+    const yOffset = -100 //88px that the height of header
+    const el = document.getElementById(`${id}`)!
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
+
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
   return (
     <Row className="header" justify="space-between" align="middle">
       <Col>
@@ -25,6 +34,7 @@ const Header = () => {
             <Typography.Text
               style={{ color: '#F3F4F3', cursor: 'pointer' }}
               key={route}
+              onClick={() => scrollToSection(route)}
             >
               {title}
             </Typography.Text>
