@@ -7,6 +7,20 @@ import PROJECT3 from 'static/images/projects/project3.png'
 
 import './index.less'
 
+const PROJECTS = [
+  { name: 'Sentre', img: PROJECT1, url: 'https://hub.sentre.io/app/store' },
+  {
+    name: 'Inter DAO',
+    img: PROJECT2,
+    url: 'https://hub.sentre.io/app/inter_dao?autoInstall=true',
+  },
+  {
+    name: 'Any Art',
+    img: PROJECT3,
+    url: 'https://hub.sentre.io/app/any_arts?autoInstall=true',
+  },
+]
+
 const Projects = () => {
   const setMultiAttributes = useCallback(
     (el: Element, attrs: Record<string, string | number>) => {
@@ -58,12 +72,15 @@ const Projects = () => {
         </Typography.Title>
       </Col>
       <div className="wrapper-parallax">
-        {[PROJECT1, PROJECT2, PROJECT3].map((img, idx) => (
+        {PROJECTS.map(({ img, name, url }, idx) => (
           <div className="parallax-item" key={idx}>
             <div className="parallax-img">
               <Image src={img} preview={false} />
-              <Typography.Title className="project-title title-section">
-                Sentre
+              <Typography.Title
+                onClick={() => window.open(url, '_blank')}
+                className="project-title title-section"
+              >
+                {name}
               </Typography.Title>
             </div>
             <div className="parallax-padding" />
