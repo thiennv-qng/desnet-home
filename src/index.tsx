@@ -1,5 +1,5 @@
 import { render } from 'react-dom'
-import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom'
+import { Route, Routes, Navigate, HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 import View from './view'
@@ -8,12 +8,12 @@ import store from 'store'
 
 render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/home" element={<View />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root'),
 )
