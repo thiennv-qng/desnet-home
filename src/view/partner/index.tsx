@@ -1,10 +1,12 @@
+import { useSelector } from 'react-redux'
+
 import { Col, Row, Image, Typography } from 'antd'
+
+import { AppState } from 'store'
 
 import SENTRE from 'static/images/sentre-logo.svg'
 import INTERDAO from 'static/images/interdao-logo.svg'
 import COIN98 from 'static/images/coin98-logo.svg'
-import { useSelector } from 'react-redux'
-import { AppState } from 'store'
 
 const PARTNERS = [SENTRE, INTERDAO, COIN98]
 

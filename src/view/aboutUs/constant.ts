@@ -7,22 +7,22 @@ export const TIMELINE = [
   {
     quarter: 1,
     year: 2021,
-    desc: 'Collaborate with Sentre protocol.',
+    desc: 'Collaborate with Sentre Protocol.',
   },
   {
     quarter: 2,
     year: 2021,
-    desc: 'Sentre protocol project development.',
+    desc: 'Sentre Protocol project development.',
   },
   {
     quarter: 3,
     year: 2021,
-    desc: 'Support Sentre protocol launching.',
+    desc: 'Support Sentre Protocol launching.',
   },
   {
     quarter: 4,
     year: 2021,
-    desc: 'Fundraising success.',
+    desc: 'Succeed in fundraising.',
   },
   {
     quarter: 1,
@@ -32,11 +32,11 @@ export const TIMELINE = [
   {
     quarter: 2,
     year: 2022,
-    desc: 'Collaborate with InterDAO and support Solana Vietnam coding camp season 1.',
+    desc: 'Collaborate with InterDAO and support Solana Vietnam Coding Camp season 1.',
   },
   {
     quarter: 3,
     year: 2022,
-    desc: 'Collaborate with Any Art.',
+    desc: 'Collaborate with Any Arts.',
   },
 ]

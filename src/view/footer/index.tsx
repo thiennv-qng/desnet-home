@@ -4,15 +4,15 @@ import { Col, Image, Row, Space, Typography } from 'antd'
 import IonIcon from 'components/icon'
 
 import { AppState } from 'store'
+import { useContact } from 'hooks/useContact'
 
 import LOGO from 'static/images/logo-dark.svg'
 
 import './index.less'
-import { useContact } from 'hooks/useContact'
 
 const Footer = () => {
   const width = useSelector((state: AppState) => state.ui.width)
-  const isMobile = width < 668
+  const isMobile = width < 680
   const onContact = useContact()
 
   return (
@@ -42,9 +42,26 @@ const Footer = () => {
             align={isMobile ? 'center' : 'start'}
           >
             <Typography.Title level={2}>Contact</Typography.Title>
-            <Space className="space-middle-icon" onClick={onContact}>
-              <IonIcon style={{ fontSize: 18 }} name="mail-outline" />
-              <Typography.Text>hello@descartes.network</Typography.Text>
+            <Space direction="vertical" size={4}>
+              <Space
+                className="space-middle-icon contact-item"
+                onClick={onContact}
+              >
+                <IonIcon style={{ fontSize: 20 }} name="mail" />
+                <Typography.Text>hello@descartes.network</Typography.Text>
+              </Space>
+              <Space
+                className="space-middle-icon contact-item"
+                onClick={() =>
+                  window.open(
+                    'https://www.facebook.com/DescartesNetwork',
+                    '_blank',
+                  )
+                }
+              >
+                <IonIcon style={{ fontSize: 20 }} name="logo-facebook" />
+                <Typography.Text>facebook.com/DescartesNetwork</Typography.Text>
+              </Space>
             </Space>
           </Space>
         </Col>

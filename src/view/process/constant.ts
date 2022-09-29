@@ -11,8 +11,7 @@ export const PROCESS_CONTENT = [
   },
   {
     title: 'Development',
-    description:
-      'The main focus of the phase is the development of perfect codes by the developers.',
+    description: 'Develop the perfect codes for the customer.',
     icon: 'code-slash-outline',
   },
   {
@@ -23,12 +22,12 @@ export const PROCESS_CONTENT = [
   },
   {
     title: 'Testing',
-    description: 'Continuous scripted quality assurance.',
+    description: 'Ensure product quality by constant testing and bug fixing.',
     icon: 'bug-outline',
   },
   {
     title: 'Hand over',
-    description: 'Provide products to customers.',
+    description: 'Deliver the final product to the customer.',
     icon: 'open-outline',
   },
 ]

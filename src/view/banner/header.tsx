@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux'
 
 import { Col, Row, Image, Button, Space, Typography } from 'antd'
+import DrawerHeader from './drawerHeader'
 
 import { AppState } from 'store'
+import { useContact } from 'hooks/useContact'
 
 import LOGO from 'static/images/logo.png'
 import LOGO_MOBILE from 'static/images/logo192.png'
-import DrawerHeader from './drawerHeader'
-import { useContact } from 'hooks/useContact'
 
 export const SECTIONS_LIST = [
   { title: 'Home', route: 'home' },
@@ -33,11 +33,7 @@ const Header = () => {
   return (
     <Row className="header" justify="space-between" align="middle">
       <Col>
-        <Image
-          src={logo}
-          preview={false}
-          style={{ height: 32, cursor: 'pointer' }}
-        />
+        <Image src={logo} preview={false} className="header-logo" />
       </Col>
       {width > 661 && (
         <Col>
