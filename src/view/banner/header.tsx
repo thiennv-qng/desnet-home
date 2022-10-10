@@ -11,7 +11,9 @@ import LOGO_MOBILE from 'static/images/logo192.png'
 
 export const SECTIONS_LIST = [
   { title: 'Home', route: 'home' },
+  { title: 'Services', route: 'services' },
   { title: 'Projects', route: 'projects' },
+  { title: 'Achievements', route: 'achievements' },
   { title: 'Process', route: 'process' },
   { title: 'About us', route: 'about-us' },
 ]
@@ -35,7 +37,7 @@ const Header = () => {
       <Col>
         <Image src={logo} preview={false} className="header-logo" />
       </Col>
-      {width > 661 && (
+      {width > 815 && (
         <Col>
           <Space size={40}>
             {SECTIONS_LIST.map(({ title, route }) => (
@@ -52,7 +54,7 @@ const Header = () => {
         </Col>
       )}
       <Space size={16}>
-        {width <= 661 && <DrawerHeader scrollToSection={scrollToSection} />}
+        {width <= 815 && <DrawerHeader scrollToSection={scrollToSection} />}
         <Col>
           <Button onClick={onContact} type="primary">
             Contact us

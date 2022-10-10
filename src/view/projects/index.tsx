@@ -80,7 +80,7 @@ const Projects = () => {
   }, [getScaleRatio, setMultiAttributes])
 
   return (
-    <Row gutter={[0, 72]} id="projects">
+    <Row gutter={[0, { xs: 32, sm: 32, md: 72, lg: 72 }]} id="projects">
       <Col span={24} style={{ textAlign: 'center' }}>
         <Typography.Title className="title-section" level={1}>
           Recent Projects

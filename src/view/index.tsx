@@ -1,7 +1,9 @@
 import { Col, Row } from 'antd'
 import Banner from './banner'
 import Partner from './partner'
+import Services from './services'
 import Projects from './projects'
+import Achievements from './achievements'
 import Process from './process'
 import AboutUs from './aboutUs'
 import Watcher from './watcher'
@@ -21,7 +23,13 @@ const View = () => {
         <Partner />
       </Col>
       <Col span={24}>
+        <Services />
+      </Col>
+      <Col span={24}>
         <Projects />
+      </Col>
+      <Col span={24}>
+        <Achievements />
       </Col>
       <Col span={24}>
         <Process />
