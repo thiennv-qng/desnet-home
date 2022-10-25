@@ -21,7 +21,7 @@ const DrawerHeader = ({
       <Drawer
         placement="right"
         onClose={() => setVisible(false)}
-        visible={visible}
+        open={visible}
       >
         <List
           dataSource={SECTIONS_LIST}

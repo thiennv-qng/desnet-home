@@ -5,75 +5,33 @@
   &-center {
     position: relative;
     .prize {
-      &-1 {
-        position: absolute;
-        top: -128px;
-        left: 0;
-      }
-      &-2 {
-        position: absolute;
-        bottom: -148px !important;
-        left: 0;
-      }
-      &-3 {
-        position: absolute;
-        top: 50%;
-        right: -15px;
-        transform: translateY(-50%);
-      }
-    }
-  }
-
-  .circle {
-    background: #55a432;
-    padding: 96px;
-    border-radius: 50%;
-    height: 256px;
-    width: 256px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 100px rgba(85, 164, 50, 0.5);
-    position: relative;
-    &::after {
-      content: '';
-      width: calc(100% + 224px);
-      height: calc(100% + 224px);
+      transform: translate(-50%, -50%) scale(0.4);
+      transition: all 0.4s 0.4s linear;
+      opacity: 0;
+      min-width: 300px;
       position: absolute;
       top: 50%;
       left: 50%;
-      border-radius: 50%;
-      border: 1px solid #55a432;
-      transform: translate(-50%, -50%);
-      opacity: 0.25;
     }
-    &::before {
-      content: '';
-      width: calc(100% + 336px);
-      height: calc(100% + 336px);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border-radius: 50%;
-      border: 1px solid #55a432;
-      transform: translate(-50%, -50%);
-      opacity: 0.1;
-    }
-  }
-  .cup {
-    position: relative;
-    &::after {
-      content: '';
-      width: 368px;
-      height: 368px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border-radius: 50%;
-      border: 1px solid #55a432;
-      transform: translate(-50%, -50%);
-      opacity: 0.5;
+    &.active {
+      .prize {
+        transform: scale(1);
+        transition-delay: 0s;
+        opacity: 1;
+        &-1 {
+          top: 0;
+          left: 0;
+        }
+        &-2 {
+          top: 100%;
+          left: 0;
+          transform: translateY(-100%);
+        }
+        &-3 {
+          left: 100%;
+          transform: translateX(-100%);
+        }
+      }
     }
   }
   &-card {
@@ -87,42 +45,31 @@
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .achievement {
-    .circle {
-      width: 96px !important ;
-      height: 96px !important;
-    }
     &-card {
       .ant-card-body {
         padding: 16px !important;
       }
     }
-    .cup {
-      &::after {
-        width: 310px !important;
-        height: 310px !important;
-      }
-    }
     &-center {
       .prize {
-        &-1 {
-          top: -205px;
-          left: 0;
-          width: 50% !important;
-          min-height: 156px !important;
-          width: calc(50% - 8px) !important;
-        }
+        min-width: unset;
+        width: calc(50% - 12px);
+        min-height: 150px;
         &-2 {
-          bottom: -128px;
-          right: 0;
-          width: 100% !important;
+          width: 100%;
         }
-        &-3 {
-          top: -128px;
-          right: 0;
-          width: calc(50% - 8px) !important;
-          min-height: 156px !important;
+      }
+      &.active {
+        .prize {
+          &-1 {
+            top: 0;
+            left: 0;
+          }
+          &-3 {
+            top: 0;
+          }
         }
       }
     }

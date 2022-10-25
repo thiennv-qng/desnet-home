@@ -1,0 +1,32 @@
+.achievement-bg {
+  width: 100%;
+  circle {
+    animation: zoom 1.4s linear infinite;
+    transform-origin: center;
+    &#circle_1 {
+      animation-delay: 0s;
+    }
+    &#circle_2 {
+      animation-delay: 0.2s;
+    }
+    &#circle_3 {
+      animation-delay: 0.4s;
+    }
+  }
+  #circle_cup {
+    transform-origin: center;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.08);
+  }
+  35%,
+  100% {
+    transform: scale(1);
+  }
+}
