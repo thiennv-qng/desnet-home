@@ -4,10 +4,13 @@ import { Button, Col, Row, Typography } from 'antd'
 import Achievement from 'static/images/achievement'
 import CardAchievement from './cardAchievement'
 
+import { useContact } from 'hooks/useContact'
+
 import './index.less'
 
 const Achievements = () => {
   const [active, setActive] = useState(false)
+  const onContact = useContact()
 
   const onScroll = useCallback((e: Event) => {
     const ctx = document.querySelector('#achievement')
@@ -42,7 +45,7 @@ const Achievements = () => {
           />
           <CardAchievement
             label="3rd Place"
-            description="Solana Riptide Hackathon 2020"
+            description="Solana Riptide Hackathon 2022"
             className="prize prize-2"
           />
           <CardAchievement
@@ -53,7 +56,9 @@ const Achievements = () => {
         </div>
       </Col>
       <Col span={24} style={{ textAlign: 'center' }}>
-        <Button type="primary">Contact us</Button>
+        <Button onClick={onContact} type="primary">
+          Contact us
+        </Button>
       </Col>
     </Row>
   )

@@ -6,19 +6,19 @@ export const CONTENTS = [
   {
     label: 'Consulting',
     descriptions:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+      'Receive consultation from Web3 experts and OG blockchain builders with 6+ years hands-on experience. We offer Enterprise IT Consulting, Solution Consulting, Platform Consulting and other on-demand services.',
     icon: Consulting,
   },
   {
     label: 'Outsourcing',
     descriptions:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+      'Get your own global hackathon-winning dev team, available 24/7. Our scope of work covers everything from Application Development, Infrastructure Design & Management, UX/UI Design to on-demand services.',
     icon: Outsourcing,
   },
   {
     label: 'Building in-house teams',
     descriptions:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+      'Let us form your dream team of world-class technicians in the Solana blockchain. Optimize your cost, save your time! Contact us for more information.',
     icon: Building,
   },
 ]

@@ -13,7 +13,7 @@ export const SECTIONS_LIST = [
   { title: 'Home', route: 'home' },
   { title: 'Services', route: 'services' },
   { title: 'Projects', route: 'projects' },
-  { title: 'Achievements', route: 'achievements' },
+  { title: 'Achievements', route: 'achievement' },
   { title: 'Process', route: 'process' },
   { title: 'About us', route: 'about-us' },
 ]
